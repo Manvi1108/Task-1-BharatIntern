@@ -45,7 +45,7 @@ const DiaryItem = ({
     <CardHeader
       avatar={
         <Avatar
-         sx={{ bgcolor: 'red'}} aria-label="recipe">
+         sx={{ bgcolor: 'green'}} aria-label="recipe">
           {name.charAt(0)}
         </Avatar>
       }

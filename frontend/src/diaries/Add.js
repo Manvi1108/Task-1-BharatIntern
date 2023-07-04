@@ -101,7 +101,7 @@ const Add = () => {
           />
           <Button
             type="submit"
-            color="warning"
+            color="success"
             sx={{ width: "50%", margin: "auto", mt: 2, borderRadius: 7 }}
             variant="contained"
           >

@@ -10,7 +10,7 @@
   
 }
 .template:hover {
-    background-image: linear-gradient(to bottom, #9393ffb0, #e05ee9aa);
+    background-image: linear-gradient(to bottom, rgb(47, 143, 175) , rgb(242, 242, 88));
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
       rgba(0, 0, 0, 0.05) 0px 5px 10px;
     transform: translateX(0.4rem) translateY(-1rem);

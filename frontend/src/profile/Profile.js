@@ -45,7 +45,7 @@ const Profile = () => {
           </Typography>
           <Button
           onClick={handleClick}
-           sx={{mr:'auto', width:"15%"}} color="warning" variant="contained">Logout</Button>
+           sx={{mr:'auto', width:"15%"}} color="success" variant="contained">Logout</Button>
           <Box
             display="flex"
             flexDirection={"column"}
