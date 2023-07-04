@@ -1,13 +1,8 @@
-.app-logo{
-    animation: app-logo-spin infinite 10s linear;
-    pointer-events: none;
-
+.tabs{
+    position: sticky;
+    background-image : linear-gradient(to right, rgb(47, 143, 175) , rgb(242, 242, 88));
+    font-size: 20px;
 }
-@keyframes app-logo-spin {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+.tabs:hover{
+    font-weight: bolder;
 }

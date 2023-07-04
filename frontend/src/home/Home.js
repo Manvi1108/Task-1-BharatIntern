@@ -1,73 +1,32 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box,Button, Typography } from '@mui/material'
 import React from 'react'
-import image from '../assets/bg.avif';
-import image1 from '../assets/bluebg.png';
 import "./Home.css";
+import image from './bg-removebg-preview.png'
 import { Link } from 'react-router-dom';
-import TypeWriterEffect from 'react-typewriter-effect';
+// import TypeWriterEffect from 'react-typewriter-effect';
 
 
 function Home() {
   return (
-    <Box position={"relative"} width="100%" height="90vh" className='body'  sx=
-    {{backgroundImage : `url(${image1})`}}>
-      <Box className='images' sx={{
-          backgroundImage : `url(${image})`,
-          boxShadow: 1,
-          borderRadius: 10
-      }}>
-        <Typography 
-        variant="h4"
-        fontFamily={"dancing script"}
-        fontWeight="bold"
-        textAlign={"center"} 
-        width="100%"
-        marginLeft={20}
-        sx={{
-          position:"absolute", 
-          top:"0px" ,
-          color:"#111119de",
-          textShadow: "0 0 10px brown"
-      }}
-      >
-      <span> <TypeWriterEffect
-            startDelay={100}
-            cursorColor="black"
-            multiText={[
-              "Together Creating a Better future"     
-        ]}
-            multiTextDelay={1000}
-            typeSpeed={50}
-            
-          /></span>
-      </Typography>
-      {/* <Box height="10%></Box> */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <Box width="100%" height="30%" display={"flex"}
-      flexDirection="column"
-
-      >
-        <Typography  className='text' textAlign={"center"} variant='h4' padding={4} fontFamily={'dancing script'}>
-        Share  Your Stories
-        </Typography>
-        <Box margin="auto">
-        <Button  LinkComponent={Link} to="/add" variant="contained" sx={{ mr:2 , fontWeight:'light'}} > Share Your Story</Button>
-        <Button  LinkComponent={Link} to="/diaries" variant="contained" sx={{ ml:2 }}> View Blog</Button>
-
-            
-
+    <Box position={"relative"} width="100%" height="90vh" className='body'>
+      <Box width="100%" height="100%" display={"flex"} flexDirection="column" >
+          <div className='poll'>
+            <div className='main'>
+              <div className="content"> Content <br></br>Writing</div>
+              <br />
+              <div className="content2" marginLeft={2}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Duis ut enim lobortis, venenatis lectus nec, elementum augue.</div>
+            </div>
+            <div className='image'> <img src={image} alt="" srcset=""/></div>
+          </div>
+          <Typography  className='text' textAlign={"center"} variant='h4' padding={4} marginRight={50} fontFamily={'dancing script'}>
+          Share  Your Stories
+          </Typography>
+          <Box marginLeft={30}>
+            <Button  LinkComponent={Link} to="/add" className='button' variant='contained' sx={{mr:13}} color='success'> Share Your Story</Button>
+            <Button  LinkComponent={Link} to="/diaries" className='button' variant='contained' color='success'> View Blog</Button>
+          </Box>
         </Box>
-      </Box>
-        </Box>
-      
-
-  </Box>
+    </Box>
   );
 
 };

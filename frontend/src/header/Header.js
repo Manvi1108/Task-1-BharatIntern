@@ -1,8 +1,8 @@
 import React,{ useState } from 'react';
-import{ AppBar,Tab,Tabs, Toolbar} from '@mui/material';
+import{ Tab,Tabs, Toolbar} from '@mui/material';
 import {Link} from "react-router-dom";
-import home from '../home/Home'
-import logo from '../assets/image.png';
+// import home from '../home/Home'
+// import logo from '../assets/image.png';
 import './Header.css'
 import { useSelector } from 'react-redux';
 const linksArr=["home", "diaries","auth"];
@@ -11,9 +11,8 @@ const Header = () => {
 const isLoggedIn = useSelector(state=>state.isLoggedIn);
 const [value,setValue] = useState();
 return (
-<AppBar sx={{bgcolor:'transparent',position:"sticky"}}>
-    <Toolbar> 
-        <a href={home}><img className='app-logo' src={logo} alt="logo" width="80px" height="40px" /></a> 
+<div className='tabs'>
+    <Toolbar>
             <Tabs
              value={value} onChange={(e,val)=>setValue(val)}  
              sx={{ml:"auto",textDecoration:"none"}}
@@ -28,7 +27,7 @@ return (
                     ":hover": {
                       textDecoration: "underline",
                       textUnderlineOffset: "18px",
-                      textShadow: "0 0 25px bold black",
+                      textShadow: "0 0 200px bold black",
                       fontWeight: "bold"
                     },
                   }}
@@ -45,6 +44,7 @@ return (
                     ":hover": {
                       textDecoration: "underline",
                       textUnderlineOffset: "18px",
+                      fontWeight: "bold",
                     },
                   }}
                     key={link} 
@@ -52,7 +52,7 @@ return (
                 ))}
             </Tabs>
     </Toolbar>
-  </AppBar>
+  </div>
 );
 };
 
